@@ -1,15 +1,30 @@
 import React from 'react'
 import './App.css';
-import Footer from './components/Footer'
-import MainContent from './components/MainContent'
-import Navbar from './components/Navbar'
+import Joke from './components/Joke'
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <MainContent />
-      <Footer />
+      <Joke 
+        question='joke one here'
+        punchLine='punchLine one here'
+      />
+      <Joke 
+        // question='joke one here'
+        punchLine='punchLine one here'
+      />
+      <Joke 
+        question='joke one here'
+        punchLine='punchLine one here'
+      />
+      <Joke 
+        question='joke one here'
+        punchLine='punchLine one here'
+      />
+      <Joke 
+        question='joke one here'
+        punchLine='punchLine one here'
+      />
     </div>
   );
 }

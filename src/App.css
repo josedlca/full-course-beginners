@@ -1,3 +1,7 @@
-.App h1{
+.question{
   color: gray;
+}
+
+.punchline{
+  color: rgba(80, 2, 2);
 }
