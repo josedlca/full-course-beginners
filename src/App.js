@@ -1,15 +1,15 @@
+import React from 'react'
 import './App.css';
+import Footer from './components/Footer'
+import MainContent from './components/MainContent'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <div className="App">
-      <h1>Jose De La Cruz</h1>
-      <p>Im trying to learning react </p>
-      <ol>
-        <li>japan</li>
-        <li>New Zeland</li>
-        <li>EE.UU</li>
-      </ol>
+      <Navbar />
+      <MainContent />
+      <Footer />
     </div>
   );
 }
