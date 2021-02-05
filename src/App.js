@@ -1,32 +1,25 @@
 import React from 'react'
 import './App.css';
-import Joke from './components/Joke'
+import Header from './components/Header'
+import Greeting from './components/Greeting'
 
-function App() {
-  return (
-    <div className="App">
-      <Joke 
-        question='joke one here'
-        punchLine='punchLine one here'
-      />
-      <Joke 
-        // question='joke one here'
-        punchLine='punchLine one here'
-      />
-      <Joke 
-        question='joke one here'
-        punchLine='punchLine one here'
-      />
-      <Joke 
-        question='joke one here'
-        punchLine='punchLine one here'
-      />
-      <Joke 
-        question='joke one here'
-        punchLine='punchLine one here'
-      />
-    </div>
-  );
+// function App() {
+//   return (
+//     <div className="App">
+//       Hello world
+//     </div>
+//   );
+// }
+
+class App extends React.Component{
+  render(){
+    return(
+      <div>
+        <Header username='Jose De La Cruz'/>
+        <Greeting/>
+      </div>
+    )
+  }
 }
 
 export default App;
