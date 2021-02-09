@@ -1,34 +1,34 @@
 import React,{Component} from 'react'
 import './App.css';
-import Header from './components/Header'
-import Greeting from './components/Greeting'
 
 class App extends Component{
   constructor(){
     super()
     this.state={
-      log: false
+      loading: false,
+      character: {}
     }
-    this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick(){
-    this.setState(prevState => {
-      return{
-        log: !prevState.log 
-      }
+  componentDidMount(){
+    this.setState({
+      loading: true
     })
+    fetch("https://swapi.co/api/people/1")
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          loading: false,
+          character: data
+        })
+      })
   }
 
   render(){
+    const text = this.state.loading ? "loading..." : this.state.character.name
     return(
       <div>
-        <p>
-          {this.state.log?'You are logged in':'You are logged out'}
-        </p>
-        <button onClick={this.handleClick}>
-          {this.state.log?'sign out':'sign in'}
-        </button>
+        {text}
       </div>
     )
   }
